@@ -1,0 +1,104 @@
+.Home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .wrap {
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        
+        img {
+            position: absolute;
+            bottom: 20%;
+            right: 16%;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            animation: rotateSticker 5s infinite;
+        }
+        @keyframes rotateSticker {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    #scrollable {
+        height: 30vh; /* 반응형 높이값 */
+        overflow-y: scroll;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        scroll-snap-type: y mandatory;
+        font-family: "Inter", sans-serif;
+        padding-left: 3rem;
+    
+        h1 {
+            font-size: 10vw;
+            height: 30vh;
+            font-weight: 500;
+            scroll-snap-align: start;
+            user-select: none;
+        }
+        #retype {
+            display:  inline-block;
+            max-width: max-content;
+            width: 2rem;
+            animation: typing-erase 5s linear infinite;
+            overflow: hidden; 
+            border-right: .01em solid #000;
+            white-space: nowrap; 
+            line-height: 1.2;
+    
+            &::after {
+                content: "";
+                animation: change-text 40s linear infinite;
+            }
+            @keyframes typing-erase {
+                0% { width: 0 }
+                40% { width: 100% }
+                50%, 100% {width: 0 }
+            }
+            @keyframes change-text {
+                0% { content:"publisher"; }
+                20% { content:"design"; }
+                40% { content:"publisher"; }
+                90% { content:"!@#$%&"; }
+                100% { content:"publisher"; }
+            }
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .home_bottom {
+        position: absolute;
+        bottom: $footer-h;
+        width: 100%;
+        padding: 1.25rem 0;
+
+        .container {
+            @include flex(row, flex-end, space-between);
+            
+            #time {
+                user-select: none;
+            }
+            a {
+                padding: 5px 20px;
+                color: #fff;
+                background-color: #000;
+                border-radius: 20px;
+                border: 2px solid #fff;
+                line-height: 1;
+            }
+            .hidden {
+                visibility: hidden;
+            }
+        }
+    }
+}

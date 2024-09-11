@@ -1,0 +1,22 @@
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0 25px;
+    background-color: #fff;
+
+    .pinned_footer{
+        @include flex(row, center, center);
+        height: 100px;
+        border-top: 2px solid #000;
+        line-height: 1.5;
+
+        a {
+            color: #000;
+        }
+        .copyright {
+            font-size: 0.625rem;
+            margin-top: 1rem;
+        }
+    }
+}
