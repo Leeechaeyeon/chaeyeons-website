@@ -1,14 +1,17 @@
 .Archive {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 1300px;
 
     .container {
+        width: 100%;
+        height: 100%;
         padding: 0 20px;
+
         .archive__title {
             @include flex(row, center, space-between);
             width: 100%;
-            margin-top: -1rem;
+            margin-top: -1.625rem;
 
             h2 {
                 font-family: 'Inter';
@@ -22,20 +25,18 @@
             }
         }
         .archive__cont {
-            width: 100%;
-            height: 100%;
-            font-family: 'Noto Sans KR';
             position: relative;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Noto Sans KR';
 
             .modal {
-                position: absolute;
-                top: 50%;
-                left: 50%;
                 display: block;
-                width: 300px;
-                height: 300px;
+                position: absolute;
                 background-color: #fff;
+                border: 1px solid #000;
                 color: #000;
+                transform: translateX(-50%);
 
                 .modal__body {
                     position: relative;
@@ -45,22 +46,126 @@
                         position: absolute;
                         top: -1.625rem;
                         left: 0;
-                        font-size: 1rem;
-                        color: #fff;
+                        font-size: 0.875rem;
+                        
                     }
-                    button {
+                    h5 {
+                        font-size: 1.425rem;
+                    }
+                    a {
+                        color: #000;
+                        font-size: 3rem;
+                        line-height: 1.2;
+                        font-weight: 700;
+                                                
+                    }
+                    p~p {
+                        margin-top: 0.3rem;
+                    }
+                    img {
+                        width: 100%;
+                        margin-top: 0.625rem;
+                    }
+                    .btn_fixed {
                         position: absolute;
-                        top: 1rem;
-                        right: 1rem;
-                        background: none;
-                        border: 0;
-                        outline: none;
-                        cursor: pointer;
+                        right: 0;
+                        top: 0;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        
+                        button {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            background: none;
+                            border: 0;
+                            outline: none;
+                            cursor: pointer;
+    
+                            &::before {
+                                content: "";
+                                display: block;
+                                width: 2px;
+                                height: 16px;
+                                background: #000;
+                                transform: rotate(45deg);
+                                position: absolute;
+                                left: 3px;
+                                top: 3px;
+                            }
+                            &::after {
+                                content: "";
+                                display: block;
+                                width: 2px;
+                                height: 16px;
+                                background: #000;
+                                transform: rotate(-45deg);
+                                position: absolute;
+                                left: 3px;
+                                top: 3px;
+                            }
+                        }
                     }
                     
                 }
             }
-
+            .modal1 {//img
+                width: 280px;
+                left: 60%;
+                top: 30%;
+                z-index: 10;
+            }
+            .modal2 {//img
+                width: 280px;
+                left: 73%;
+                top: 6%;
+            }
+            .modal3 {
+                width: 390px;
+                left: 36%;
+                top: 7%;
+                z-index: 10;
+            }
+            .modal4 {//img
+                width: 280px;
+                left: 34%;
+                top: 19%;
+            }
+            .modal5 {//img
+                width: 280px;
+                left: 48%;
+                top: 13%;
+            }
+            .modal6 {//img
+                width: 280px;
+                left: 65%;
+                top: 60%;
+            }
+            .modal7 {
+                width: 380px;
+                left: 42%;
+                top: 56%;
+                z-index: 10;
+            }
+            .modal8 {//img
+                width: 280px;
+                left: 85%;
+                top: 20%;
+            }
+            .modal9 {//img
+                width: 280px;
+                left: 22%;
+                top: 30%;
+            }
+            .modal10 {
+                left: 83%;
+                bottom: 0%;
+            }
+            .modal11 {
+                left: 17%;
+                bottom: 10%;
+            }
         }
     }
 }

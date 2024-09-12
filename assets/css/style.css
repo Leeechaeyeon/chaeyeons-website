@@ -55,6 +55,9 @@ body.dark #header nav .tabmenu li a {
 body.dark #header nav .tabmenu li a.active {
   background-color: #000;
 }
+body.dark #header .nav_side #dark_light {
+  color: #fff;
+}
 body.dark #header .nav_side.right .ico-link {
   background-image: url(../img/ico-github_dark.png);
 }
@@ -108,6 +111,17 @@ body.dark #main .Projects .wrapper .item::before {
 }
 body.dark #main .Projects .pagination button.active:before {
   background: #fff;
+}
+body.dark #main .Archive .container .archive__cont .modal {
+  background-color: #000;
+  border-color: #fff;
+  color: #fff;
+}
+body.dark #main .Archive .container .archive__cont .modal .modal__body .btn_fixed button::before, body.dark #main .Archive .container .archive__cont .modal .modal__body .btn_fixed button::after {
+  background-color: #fff;
+}
+body.dark #main .Archive .container .archive__cont .modal .modal__body a {
+  color: #fff;
 }
 body.dark #footer {
   background-color: #000;
@@ -224,8 +238,16 @@ header.header-up {
   cursor: pointer;
   padding: 0.5rem 1rem;
 }
-#header .container .nav_side a#dark_light {
+#header .container .nav_side #dark_light {
   width: 100px;
+  padding: 0.5rem 1rem;
+  border: 0;
+  outline: 0;
+  background: none;
+  font-family: "Roboto Mono";
+  font-size: 1rem;
+  color: #000;
+  cursor: pointer;
 }
 #header .container .nav_side.right {
   display: flex;
@@ -417,7 +439,7 @@ header.header-up {
   flex-direction: column;
   align-items: center;
   width: 1080px;
-  margin: 0 auto;
+  margin: -2rem auto 0;
 }
 .Profile .container article:not(:first-child) {
   margin-top: 5rem;
@@ -683,7 +705,7 @@ header.header-up {
 }
 .Projects .wrapper .item {
   position: relative;
-  padding: 150px 80px;
+  padding: 100px 80px;
   flex: 0 0 1000px;
   height: 100%;
   display: flex;
@@ -691,7 +713,7 @@ header.header-up {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
   gap: 2rem;
 }
 .Projects .wrapper .item:before {
@@ -777,9 +799,11 @@ header.header-up {
 .Archive {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 1300px;
 }
 .Archive .container {
+  width: 100%;
+  height: 100%;
   padding: 0 20px;
 }
 .Archive .container .archive__title {
@@ -788,7 +812,7 @@ header.header-up {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: -1rem;
+  margin-top: -1.625rem;
 }
 .Archive .container .archive__title h2 {
   font-family: "Inter";
@@ -805,20 +829,18 @@ header.header-up {
           user-select: none;
 }
 .Archive .container .archive__cont {
-  width: 100%;
-  height: 100%;
-  font-family: "Noto Sans KR";
   position: relative;
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans KR";
 }
 .Archive .container .archive__cont .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   display: block;
-  width: 300px;
-  height: 300px;
+  position: absolute;
   background-color: #fff;
+  border: 1px solid #000;
   color: #000;
+  transform: translateX(-50%);
 }
 .Archive .container .archive__cont .modal .modal__body {
   position: relative;
@@ -828,17 +850,118 @@ header.header-up {
   position: absolute;
   top: -1.625rem;
   left: 0;
-  font-size: 1rem;
-  color: #fff;
+  font-size: 0.875rem;
 }
-.Archive .container .archive__cont .modal .modal__body button {
+.Archive .container .archive__cont .modal .modal__body h5 {
+  font-size: 1.425rem;
+}
+.Archive .container .archive__cont .modal .modal__body a {
+  color: #000;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.Archive .container .archive__cont .modal .modal__body p ~ p {
+  margin-top: 0.3rem;
+}
+.Archive .container .archive__cont .modal .modal__body img {
+  width: 100%;
+  margin-top: 0.625rem;
+}
+.Archive .container .archive__cont .modal .modal__body .btn_fixed {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  right: 0;
+  top: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+.Archive .container .archive__cont .modal .modal__body .btn_fixed button {
+  position: relative;
+  width: 100%;
+  height: 100%;
   background: none;
   border: 0;
   outline: none;
   cursor: pointer;
+}
+.Archive .container .archive__cont .modal .modal__body .btn_fixed button::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 16px;
+  background: #000;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+.Archive .container .archive__cont .modal .modal__body .btn_fixed button::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 16px;
+  background: #000;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+.Archive .container .archive__cont .modal1 {
+  width: 280px;
+  left: 60%;
+  top: 30%;
+  z-index: 10;
+}
+.Archive .container .archive__cont .modal2 {
+  width: 280px;
+  left: 73%;
+  top: 6%;
+}
+.Archive .container .archive__cont .modal3 {
+  width: 390px;
+  left: 36%;
+  top: 7%;
+  z-index: 10;
+}
+.Archive .container .archive__cont .modal4 {
+  width: 280px;
+  left: 34%;
+  top: 19%;
+}
+.Archive .container .archive__cont .modal5 {
+  width: 280px;
+  left: 48%;
+  top: 13%;
+}
+.Archive .container .archive__cont .modal6 {
+  width: 280px;
+  left: 65%;
+  top: 60%;
+}
+.Archive .container .archive__cont .modal7 {
+  width: 380px;
+  left: 42%;
+  top: 56%;
+  z-index: 10;
+}
+.Archive .container .archive__cont .modal8 {
+  width: 280px;
+  left: 85%;
+  top: 20%;
+}
+.Archive .container .archive__cont .modal9 {
+  width: 280px;
+  left: 22%;
+  top: 30%;
+}
+.Archive .container .archive__cont .modal10 {
+  left: 83%;
+  bottom: 0%;
+}
+.Archive .container .archive__cont .modal11 {
+  left: 17%;
+  bottom: 10%;
 }
 
 /**********

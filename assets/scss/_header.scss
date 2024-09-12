@@ -60,9 +60,17 @@ header {
                 cursor: pointer;
                 padding: 0.5rem 1rem;
 
-                &#dark_light {
-                    width: 100px;
-                }
+            }
+            #dark_light {
+                width: 100px;
+                padding: 0.5rem 1rem;
+                border: 0;
+                outline: 0;
+                background: none;
+                font-family: "Roboto Mono";
+                font-size: 1rem;
+                color: #000;
+                cursor: pointer;
             }
             &.right {
                 @include flex(row,flex-end,center);

@@ -78,11 +78,17 @@ body {
                     }
                 }
             }
-            .nav_side.right {
-                .ico-link {
-                    background-image: url(../img/ico-github_dark.png);
-                    &.notion {
-                        background-image: url(../img/ico-notion_dark.png);
+            .nav_side {
+                #dark_light {
+                    color: #fff;
+                }
+
+                &.right {
+                    .ico-link {
+                        background-image: url(../img/ico-github_dark.png);
+                        &.notion {
+                            background-image: url(../img/ico-notion_dark.png);
+                        }
                     }
                 }
             }
@@ -172,7 +178,30 @@ body {
                     }
                 }
             }
-            
+            .Archive {
+                .container {
+                    .archive__cont {
+                        .modal {
+                            background-color: #000;
+                            border-color: #fff;
+                            color: #fff;
+
+                            .modal__body {
+                                .btn_fixed {
+                                    button {
+                                        &::before, &::after {
+                                            background-color: #fff;
+                                        }
+                                    }
+                                }
+                                a {
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         #footer {

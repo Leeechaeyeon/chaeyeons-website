@@ -48,13 +48,13 @@
         }
         .item {
             position: relative;
-            padding: 150px 80px;
+            padding: 100px 80px;
             flex: 0 0 1000px;
             height: 100%;
             display: flex;
             align-items: center;
             user-select: none;
-            border-right: 1px solid rgba(0, 0, 0, .08);
+            border-left: 1px solid rgba(0, 0, 0, .08);
             gap: 2rem;
             
             &:before {

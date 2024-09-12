@@ -42,7 +42,6 @@ function hasScrolled() {
     // 현재 스크롤위치 지정
     lastScrollTop = st;
 };
-
 /*************
     dark, light 모드 
 *************/
@@ -52,19 +51,19 @@ const button2 = document.querySelector('#dark_light');
 var date = new Date();
 var hours = date.getHours();
 
-window.onload = function(){ 
-    // 시간에 따른 date, night 버전 체크
-    function checkTime() {  
-        if (hours >= 9 && hours <= 20) {
-            body.className = "";
-            button2.innerHTML = "(dark)";
-        } else {
-            body.className = "dark";
-            button2.innerHTML = "(light)";
-        }
+// 시간에 따른 date, night 버전 체크
+function checkTime() {  
+    if (hours >= 9 && hours <= 20) {
+        body.className = "";
+        button2.innerHTML = "(dark)";
+    } else {
+        body.className = "dark";
+        button2.innerHTML = "(light)";
     }
-    // 버튼으로 모드 전환
-    button2.onclick = () => {
+}
+// 버튼으로 모드 전환
+function darkLight() {
+    button2.onclick = function() {
         if(body.className == "dark"){
             body.className = "";
             button2.innerHTML = "(dark)";
@@ -72,12 +71,17 @@ window.onload = function(){
             body.className = "dark";
             button2.innerHTML = "(light)";
         }
-    };
+    }
+}
+darkLight();
 
-    $(document).ready(function() {
-        checkTime();
-    });
-};
+
+$(document).ready(function() {
+    checkTime();
+});
+// window.onload = function(){ 
+
+// };
 
 
 /*************
