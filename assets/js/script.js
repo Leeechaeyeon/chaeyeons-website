@@ -162,3 +162,61 @@ for (let i = 0; i < tab.length; i++) {
     document.getElementById(matchingTab).classList.add('active');
   });
 }
+
+
+/*************
+    arcive탭에서 modal 클릭 시 맨앞으로 가져오기
+*************/
+document.querySelectorAll('.modal').forEach(el => {
+    el.addEventListener('click', () => {
+      resetIndex();
+      el.style.zIndex = "1"
+    })
+  })
+  function resetIndex() {
+    document.querySelectorAll('.modal').forEach(el => {
+      el.style.zIndex = "auto"
+  })}
+
+/*************
+    arcive탭에서 modal창 닫기
+*************/
+const btnClose = document.querySelectorAll(".close");
+
+// 모든 닫기 버튼에 대해 클릭 이벤트 리스너 등록
+btnClose.forEach(button => {
+    button.addEventListener("click", function() {
+        // 현재 버튼의 부모 요소 중 .modal 클래스를 가진 요소를 찾아서 닫음
+        const modal = button.closest(".modal");
+        if (modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+/*************
+    arcive탭에서 refresh 버튼 클릭시 modal 전부 다시 불러오기
+*************/
+
+const modals = document.querySelectorAll(".modal");
+const refresh = document.querySelector(".refresh");
+
+// 함수: 모든 모달의 display 속성을 block으로 변경
+function showAllModals() {
+    modals.forEach(modal => {
+        modal.style.display = "block";
+    });
+}
+
+// refresh 버튼 클릭 이벤트
+refresh.addEventListener("click", function() {
+    // 하나라도 display가 none인 modal이 있는지 확인
+    const isAnyModalHidden = Array.from(modals).some(modal => {
+        return window.getComputedStyle(modal).display === "none";
+    });
+
+    // 만약 하나라도 숨겨져 있다면 모든 modal을 보여줌
+    if (isAnyModalHidden) {
+        showAllModals();
+    }
+});

@@ -18,16 +18,30 @@
                 font-size: 3rem;
                 user-select: none;
             }
+            div {
+                width: 250px;
+            }
             p {
                 font-family: "Roboto Mono", monospace;
-                width: 260px;
                 user-select: none;
+            }
+            .refresh {
+                background-color: #000;
+                border: 1px solid #fff;
+                border-radius: 33px;
+                color: #fff;
+                font-family: 'Roboto Mono';
+                font-size: 1rem;
+                padding: 7px 20px;
+                margin-top: 5px;;
+                transition: .2s ease-in-out;
+                cursor: pointer;
             }
         }
         .archive__cont {
             position: relative;
             width: 100%;
-            height: 100vh;
+            height: 125vh;
             font-family: 'Noto Sans KR';
 
             .modal {
@@ -36,7 +50,8 @@
                 background-color: #fff;
                 border: 1px solid #000;
                 color: #000;
-                transform: translateX(-50%);
+                cursor: move;
+                transform: translate(-50%);
 
                 .modal__body {
                     position: relative;
@@ -112,59 +127,63 @@
             }
             .modal1 {//img
                 width: 280px;
-                left: 60%;
+                left: 57%;
                 top: 30%;
-                z-index: 10;
             }
             .modal2 {//img
                 width: 280px;
-                left: 73%;
+                left: 70%;
                 top: 6%;
             }
             .modal3 {
                 width: 390px;
-                left: 36%;
+                left: 33%;
                 top: 7%;
-                z-index: 10;
             }
             .modal4 {//img
                 width: 280px;
-                left: 34%;
+                left: 31%;
                 top: 19%;
             }
             .modal5 {//img
                 width: 280px;
-                left: 48%;
+                left: 45%;
                 top: 13%;
             }
             .modal6 {//img
                 width: 280px;
-                left: 65%;
-                top: 60%;
+                left: 67%;
+                top: 57%;
             }
             .modal7 {
-                width: 380px;
-                left: 42%;
-                top: 56%;
+                width: 300px;
+                left: 37%;
+                top: 52%;
                 z-index: 10;
             }
             .modal8 {//img
                 width: 280px;
-                left: 85%;
+                left: 82%;
                 top: 20%;
             }
-            .modal9 {//img
+            .modal3 {//img
                 width: 280px;
-                left: 22%;
+                left: 19%;
                 top: 30%;
             }
+            .modal9 {
+                width: 390px;
+                left: 33%;
+                top: 7%;
+            }
             .modal10 {
-                left: 83%;
-                bottom: 0%;
+                width: 250px;
+                left: 88%;
+                top: 90%
             }
             .modal11 {
-                left: 17%;
-                bottom: 10%;
+                left: 13%;
+                top: 80%;
             }
         }
     }

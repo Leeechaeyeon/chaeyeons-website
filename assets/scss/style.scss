@@ -180,6 +180,13 @@ body {
             }
             .Archive {
                 .container {
+                    .archive__title {
+                        .refresh {
+                            background-color: #fff;
+                            color: #000;
+                            border-color: #fff;
+                        }
+                    }
                     .archive__cont {
                         .modal {
                             background-color: #000;
