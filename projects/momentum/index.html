@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Momentum</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section class="center">
+        <!-- 기온 및 위치 -->
+        <span class="js-weather"></span>
+        
+        <div class="js-wrap">
+            <!-- 시계 -->
+            <div class="js-clock">
+                <h1 class="js-title">00:00</h1>
+            </div>
+    
+            <!-- 사용자 닉네임 설정-->
+            <form class="js-form form">
+                <input type="text" placeholder="불리고 싶은 닉네임을 설정해 주세요."/>
+            </form>
+    
+            <!-- 투두리스트 작성하기 -->
+            <h4 class="js-greeting greetings"></h4> 
+            <form class="js-todoForm">
+                <input type="text" placeholder="해야할 일을 작성해 보세요."/>
+            </form>
+            <ul class="js-todoList"></ul>
+        </div>
+
+        <!-- 저작권표기 -->
+        <p class="copyright">ⓒ 2021. LeeChaeyeon all rights reserved.</p>
+    </section>
+    <!-- js -->
+    <script src="assets/script/clock.js"></script>
+    <script src="assets/script/greeting.js"></script>
+    <script src="assets/script/todo.js"></script>
+    <script src="assets/script/bg.js"></script>
+    <script src="assets/script/weather.js"></script>
+</body> 
+</html>
