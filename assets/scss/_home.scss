@@ -10,20 +10,86 @@
         
         img {
             position: absolute;
-            bottom: 20%;
-            right: 16%;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
-            animation: rotateSticker 5s infinite;
+        }
+        .emoji00 {
+            width: 260px;
+            bottom: 20%;
+            right: 16%;
+            animation: rotateSticker 1s ease-in-out infinite;
         }
         @keyframes rotateSticker {
             0% {
-                transform: rotate(0);
+                transform:rotate(0);
+            }
+            50% {
+                transform: rotate(20deg);
             }
             100% {
-                transform: rotate(360deg);
+                transform: rotate(0);
+            }
+        }
+        .emoji01 {
+            width: 120px;
+            left: 10%;
+            bottom: 27%;
+            transform: rotate(-5deg);
+            animation: jiggleInfinite 11s infinite;
+            animation-delay: 5s;
+        }
+        @keyframes jiggleInfinite {
+            0% {
+                transform: rotate(-5deg);
+            }
+            9% {
+                transform: rotate(-5deg);
+            }
+            10% {
+                transform: rotate(-7deg);
+            }
+            11% {
+                transform: rotate(5deg);
+            }
+            12% {
+                transform: rotate(-7deg);
+            }
+            13% {
+                transform: rotate(5deg);
+            }
+            14% {
+                transform: rotate(-5deg);
+            }
+            100% {
+                transform: rotate(-5deg);
+            }
+        }
+
+        .emoji02 {
+            position: absolute;
+            left: 20%;
+            bottom: 28%;
+
+            img {
+                width: 160px;
+                z-index: -1;
+            }
+            span {
+                display: inline-block ;
+                width: 120px;
+                margin-left: 25px;
+                padding-top: 10px;
+                font-family: 'Noto Sans KR';
+                font-size: 0.875rem;
+                color: #fff;
+            }
+            &:hover {
+                span {
+                    visibility: hidden;
+                    transition: 0.1s ease-in;
+                }
             }
         }
     }

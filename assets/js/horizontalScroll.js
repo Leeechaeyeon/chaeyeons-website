@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const listener = (status) => {
-    console.log('scrollbar', status.offset.x)
     active = parseInt(status.offset.x / 900);
     
     bullets.forEach(b => {b.classList.remove('active')});
@@ -64,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
           x: x,
           ease: Power4.easeOut,
           onUpdate: () => {
-            window.console.log('option', option.x)
             scrollbar.scrollTo(option.x, 0, 0);
           }
         })
@@ -85,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     TweenMax.to(option, option.time, {
       x: x,
       onUpdate: () => {
-        window.console.log('option', option.x)
         scrollbar.scrollTo(option.x, 0, 0);
       }
     })

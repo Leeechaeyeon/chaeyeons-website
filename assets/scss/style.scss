@@ -231,6 +231,7 @@ div { box-sizing: border-box; }
 hgroup { font-weight: 700; }
 ul, ol, li { list-style: none; padding: 0; }
 a { text-decoration: none; user-select: none; box-sizing: border-box; }
+img { user-select: none!important; }
 .tar { text-align: right; }
 .tac { text-align: center; }
 .hide { display: none!important; }

@@ -164,6 +164,12 @@ a {
   box-sizing: border-box;
 }
 
+img {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+}
+
 .tar {
   text-align: right;
 }
@@ -326,20 +332,82 @@ header.header-up {
 }
 .Home .wrap img {
   position: absolute;
-  bottom: 20%;
-  right: 16%;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  animation: rotateSticker 5s infinite;
+}
+.Home .wrap .emoji00 {
+  width: 260px;
+  bottom: 20%;
+  right: 16%;
+  animation: rotateSticker 1s ease-in-out infinite;
 }
 @keyframes rotateSticker {
   0% {
     transform: rotate(0);
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    transform: rotate(20deg);
   }
+  100% {
+    transform: rotate(0);
+  }
+}
+.Home .wrap .emoji01 {
+  width: 120px;
+  left: 10%;
+  bottom: 27%;
+  transform: rotate(-5deg);
+  animation: jiggleInfinite 11s infinite;
+  animation-delay: 5s;
+}
+@keyframes jiggleInfinite {
+  0% {
+    transform: rotate(-5deg);
+  }
+  9% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(-7deg);
+  }
+  11% {
+    transform: rotate(5deg);
+  }
+  12% {
+    transform: rotate(-7deg);
+  }
+  13% {
+    transform: rotate(5deg);
+  }
+  14% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+.Home .wrap .emoji02 {
+  position: absolute;
+  left: 20%;
+  bottom: 28%;
+}
+.Home .wrap .emoji02 img {
+  width: 160px;
+  z-index: -1;
+}
+.Home .wrap .emoji02 span {
+  display: inline-block;
+  width: 120px;
+  margin-left: 25px;
+  padding-top: 10px;
+  font-family: "Noto Sans KR";
+  font-size: 0.875rem;
+  color: #fff;
+}
+.Home .wrap .emoji02:hover span {
+  visibility: hidden;
+  transition: 0.1s ease-in;
 }
 .Home #scrollable {
   height: 30vh; /* 반응형 높이값 */
@@ -445,6 +513,7 @@ header.header-up {
   align-items: center;
   width: 1080px;
   margin: -2rem auto 0;
+  position: relative;
 }
 .Profile .container article:not(:first-child) {
   margin-top: 5rem;
@@ -457,6 +526,21 @@ header.header-up {
   font-weight: 500;
   font-size: 2.25rem; /* 반응형 */
   line-height: 1.2;
+}
+.Profile .container .emoji03 {
+  position: absolute;
+  right: 23%;
+  top: 20%;
+  width: 100px;
+  transform: rotate(-6deg);
+}
+.Profile .container .emoji04 {
+  position: absolute;
+  width: 50px;
+  top: 62.5%;
+  left: -1%;
+  z-index: -1;
+  transform: rotate(-60deg);
 }
 .Profile .container #info {
   display: flex;
@@ -708,6 +792,41 @@ header.header-up {
   font-family: "Roboto Mono", monospace;
   font-size: 1.25rem;
 }
+.Projects .wrapper .section__title img {
+  position: absolute;
+  left: 20%;
+  bottom: 26%;
+  width: 60px;
+  z-index: -1;
+  animation: jiggleInfinite 11s infinite;
+  animation-delay: 5s;
+}
+@keyframes jiggleInfinite {
+  0% {
+    transform: rotate(0deg);
+  }
+  9% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-7deg);
+  }
+  11% {
+    transform: rotate(7deg);
+  }
+  12% {
+    transform: rotate(-7deg);
+  }
+  13% {
+    transform: rotate(7deg);
+  }
+  14% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .Projects .wrapper .item {
   position: relative;
   padding: 100px 80px;
@@ -756,12 +875,29 @@ header.header-up {
   display: block;
   width: 100%;
   height: 250px;
+  border-radius: 15px;
 }
 .Projects .wrapper .item .window a {
   display: block;
   width: 100%;
   height: 100%;
+  border-radius: 15px;
   background-color: cadetblue;
+}
+.Projects .wrapper .item01 .window a {
+  background: url(../img/window-webstandard.png) no-repeat center center/cover;
+}
+.Projects .wrapper .item02 .window a {
+  background: url(../img/window-haagendazs.jpg) no-repeat center center/cover;
+}
+.Projects .wrapper .item03 .window a {
+  background: url(../img/window-momentum.png) no-repeat center center/cover;
+}
+.Projects .wrapper .item04 .window a {
+  background: url(../img/window-salady.png) no-repeat center center/cover;
+}
+.Projects .wrapper .item05 .window a {
+  background: url(../img/window-canvas.png) no-repeat center center/180%;
 }
 .Projects .pagination {
   position: fixed;
@@ -818,6 +954,7 @@ header.header-up {
   justify-content: space-between;
   width: 100%;
   margin-top: -1.625rem;
+  position: relative;
 }
 .Archive .container .archive__title h2 {
   font-family: "Inter";
@@ -843,12 +980,18 @@ header.header-up {
   font-family: "Roboto Mono";
   font-size: 1rem;
   padding: 7px 20px;
-  margin-top: 5px;
+  margin-top: 7px;
   transition: 0.2s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   cursor: pointer;
+}
+.Archive .container .archive__title img {
+  position: absolute;
+  left: 61vw;
+  width: 60px;
+  z-index: -1;
 }
 .Archive .container .archive__cont {
   position: relative;

@@ -12,6 +12,7 @@
             @include flex(row, center, space-between);
             width: 100%;
             margin-top: -1.625rem;
+            position: relative;
 
             h2 {
                 font-family: 'Inter';
@@ -33,10 +34,16 @@
                 font-family: 'Roboto Mono';
                 font-size: 1rem;
                 padding: 7px 20px;
-                margin-top: 5px;;
+                margin-top: 7px;;
                 transition: .2s ease-in-out;
                 user-select: none;
                 cursor: pointer;
+            }
+            img {
+                position: absolute;
+                left: 61vw;
+                width: 60px;
+                z-index: -1;
             }
         }
         .archive__cont {
