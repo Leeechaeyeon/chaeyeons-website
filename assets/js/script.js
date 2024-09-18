@@ -63,17 +63,14 @@ function checkTime() {
 }
 // 버튼으로 모드 전환
 function darkLight() {
-    button2.onclick = function() {
-        if(body.className == "dark"){
-            body.className = "";
-            button2.innerHTML = "(dark)";
-        } else {
-            body.className = "dark";
-            button2.innerHTML = "(light)";
-        }
+    if(body.className == "dark"){
+        body.className = "";
+        button2.innerHTML = "(dark)";
+    } else {
+        body.className = "dark";
+        button2.innerHTML = "(light)";
     }
 }
-darkLight();
 
 
 $(document).ready(function() {
