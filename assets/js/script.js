@@ -72,14 +72,9 @@ function darkLight() {
     }
 }
 
-
 $(document).ready(function() {
     checkTime();
 });
-// window.onload = function(){ 
-
-// };
-
 
 /*************
     현재시간 불러오기
