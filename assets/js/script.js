@@ -46,13 +46,18 @@ function hasScrolled() {
     dark, light 모드 
 *************/
 const body = document.querySelector('body');
-const button2 = document.querySelector('#dark_light');
+const button2 = document.getElementById('dark_light');
 
 var date = new Date();
 var hours = date.getHours();
 
 // 시간에 따른 date, night 버전 체크
 function checkTime() {  
+    if (!button2) {
+        console.error("button2 element is not found");
+        return;
+    }
+    
     if (hours >= 9 && hours <= 20) {
         body.className = "";
         button2.innerHTML = "(dark)";
@@ -61,8 +66,14 @@ function checkTime() {
         button2.innerHTML = "(light)";
     }
 }
+
 // 버튼으로 모드 전환
 function darkLight() {
+    if (!button2) {
+        console.error("button2 element is not found");
+        return;
+    }
+    
     if(body.className == "dark"){
         body.className = "";
         button2.innerHTML = "(dark)";
@@ -72,9 +83,11 @@ function darkLight() {
     }
 }
 
-$(document).ready(function() {
+// DOMContentLoaded 이벤트를 사용하여 jQuery의 $(document).ready() 대체
+document.addEventListener('DOMContentLoaded', function() {
     checkTime();
 });
+
 
 /*************
     현재시간 불러오기
