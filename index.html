@@ -6,9 +6,40 @@
     <title>ⓒ 2024 Leechaeyeon's website</title>
     <!-- Stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- includeHtml JS -->
+    <script>
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /* Loop through a collection of all HTML elements: */
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /* Make an HTTP request using the attribute value as the file name: */
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /* Remove the attribute, and call this function once more: */
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /* Exit the function: */
+              return;
+            }
+          }
+        }
+    </script>
 </head>
 <body>
-    <header id="header" class="header-down includeJs" data-include-file="./include/header.html"></header>
+    <header id="header" class="header-down includeJs" data-include-file="./include/header.html" w3-include-html="./include/header.html" ></header>
     <main id="main">
         <!-- home -->
         <section class="Home tab_content active" id="tab-1">
@@ -495,33 +526,10 @@
         </section>
 
     </main>
-    <footer id="footer" class="includeJs" data-include-file="./include/footer.html"></footer>
+    <footer id="footer" class="includeJs" data-include-file="./include/footer.html"  w3-include-html="./include/footer.html" ></footer>
 
-    <!-- includeHtml JS -->
     <script>
-        (function(){
-            function includeHtml() {
-                const includeTarget = document.querySelectorAll('.includeJs');
-                includeTarget.forEach(function(el, idx) {
-                    const targetFile = el.dataset.includeFile;
-                    if(targetFile){
-                        let xhttp = new XMLHttpRequest();
-                    
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState === XMLHttpRequest.DONE) {
-                                this.status === 200 ? (el.innerHTML = this.responseText) : null
-                                this.status === 404 ? (el.innerHTML = 'include not found.') : null
-                            }
-                        }
-                        xhttp.open('GET', targetFile, true);
-                        xhttp.send();
-                        return;
-                    }
-                });
-            };
-    
-            includeHtml();
-        })();
+        includeHTML();
     </script>
     <!-- cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js"></script>
@@ -534,5 +542,7 @@
     <script src="./assets/js/horizontalScroll.js"></script>
     <script src="./assets/js/dragDrop.js"></script>
 </body>
+
+
 
 </html>
