@@ -6,40 +6,28 @@
     <title>ⓒ 2024 Leechaeyeon's website</title>
     <!-- Stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <!-- includeHtml JS -->
-    <script>
-        function includeHTML() {
-          var z, i, elmnt, file, xhttp;
-          /* Loop through a collection of all HTML elements: */
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];
-            /*search for elements with a certain atrribute:*/
-            file = elmnt.getAttribute("w3-include-html");
-            if (file) {
-              /* Make an HTTP request using the attribute value as the file name: */
-              xhttp = new XMLHttpRequest();
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  /* Remove the attribute, and call this function once more: */
-                  elmnt.removeAttribute("w3-include-html");
-                  includeHTML();
-                }
-              }
-              xhttp.open("GET", file, true);
-              xhttp.send();
-              /* Exit the function: */
-              return;
-            }
-          }
-        }
-    </script>
 </head>
 <body>
-    <header id="header" class="header-down includeJs" data-include-file="./include/header.html" w3-include-html="./include/header.html" ></header>
+    <header id="header" class="header-down">
+        <div class="container">
+            <div class="nav_side">
+                <button id="dark_light" onclick="darkLight()">(light)</button>
+            </div>
+            <nav>
+                <ul class="tabmenu">
+                    <li><a class="tab active" data-tab="tab-1">Home</a></li>
+                    <li><a class="tab" data-tab="tab-2">Profile</a></li>
+                    <li><a class="tab" data-tab="tab-3">Projects</a></li>
+                    <li><a class="tab" data-tab="tab-4">Archive</a></li>
+                </ul>
+            </nav>
+            <div class="nav_side right">
+                <a href="https://github.com/Leeechaeyeon" target="_blank" class="ico-link">github</a>
+                <a href="https://learned-helmet-4b3.notion.site/cf602f07c55d474b9b130cf87ae05b3e?pvs=4" target="_blank" class="ico-link notion">notion</a>
+            </div>
+        </div>
+        <div class="bar"></div>
+    </header>
     <main id="main">
         <!-- home -->
         <section class="Home tab_content active" id="tab-1">
@@ -526,17 +514,40 @@
         </section>
 
     </main>
-    <footer id="footer" class="includeJs" data-include-file="./include/footer.html"  w3-include-html="./include/footer.html" ></footer>
+    <footer id="footer" class="includeJs" data-include-file="./include/footer.html"></footer>
 
+    <!-- includeHtml JS -->
     <script>
-        includeHTML();
+        (function(){
+            function includeHtml() {
+                const includeTarget = document.querySelectorAll('.includeJs');
+                includeTarget.forEach(function(el, idx) {
+                    const targetFile = el.dataset.includeFile;
+                    if(targetFile){
+                        let xhttp = new XMLHttpRequest();
+                    
+                        xhttp.onreadystatechange = function() {
+                            if (this.readyState === XMLHttpRequest.DONE) {
+                                this.status === 200 ? (el.innerHTML = this.responseText) : null
+                                this.status === 404 ? (el.innerHTML = 'include not found.') : null
+                            }
+                        }
+                        xhttp.open('GET', targetFile, true);
+                        xhttp.send();
+                        return;
+                    }
+                });
+            };
+    
+            includeHtml();
+        })();
     </script>
     <!-- cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js"></script>
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- script -->
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/horizontalScroll.js"></script>
