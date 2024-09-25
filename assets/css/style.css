@@ -537,7 +537,7 @@ header.header-up {
 .Profile .container .emoji04 {
   position: absolute;
   width: 50px;
-  top: 62.5%;
+  top: 62%;
   left: -1%;
   z-index: -1;
   transform: rotate(-60deg);
@@ -581,7 +581,7 @@ header.header-up {
   top: -18px;
   z-index: 10;
   padding-top: 425px;
-  background: url(./../img/img-frame.png) no-repeat center center/cover;
+  background: url(./assets/img/img-frame.png) no-repeat center center/cover;
 }
 .Profile .container #info #info__wrap .img-webpublisher {
   display: block;
@@ -589,7 +589,7 @@ header.header-up {
   height: 150px;
   font-size: 0;
   margin-top: -20px;
-  background: url(./../img/img-webpublisher.png) no-repeat center center/contain;
+  background: url(./assets/img/img-webpublisher.png) no-repeat center center/contain;
 }
 .Profile .container #describe {
   display: grid;
@@ -624,17 +624,17 @@ header.header-up {
   width: 1.3rem;
   height: 1.3rem;
   margin-right: 10px;
-  background: url(./../img/ico-phone.png) no-repeat center center/cover;
+  background: url(./assets/img/ico-phone.png) no-repeat center center/cover;
 }
 .Profile .container #describe .desc__wrap .ico-mail {
   width: 1.4rem;
   height: 1.5rem;
-  background: url(./../img/ico-mail.png) no-repeat center 3px/cover;
+  background: url(./assets/img/ico-mail.png) no-repeat center 3px/cover;
 }
 .Profile .container #describe .desc__wrap .ico-home {
   width: 1.6rem;
   height: 1.6rem;
-  background: url(./../img/ico-home.png) no-repeat -2px 1px/cover;
+  background: url(./assets/img/ico-home.png) no-repeat -2px 1px/cover;
   margin-right: 6px;
 }
 .Profile .container #history {
@@ -787,17 +787,16 @@ header.header-up {
 .Projects .wrapper .section__title h2 {
   font-size: 4rem;
   margin-bottom: 1rem;
+  position: relative;
 }
-.Projects .wrapper .section__title p {
-  font-family: "Roboto Mono", monospace;
-  font-size: 1.25rem;
-}
-.Projects .wrapper .section__title img {
+.Projects .wrapper .section__title h2::before {
+  content: "";
   position: absolute;
-  left: 20%;
-  bottom: 26%;
-  width: 60px;
-  z-index: -1;
+  right: -51px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  background: url(./../img/emoji-lightbulbpng.png) no-repeat center center/cover;
   animation: jiggleInfinite 11s infinite;
   animation-delay: 5s;
 }
@@ -826,6 +825,10 @@ header.header-up {
   100% {
     transform: rotate(0deg);
   }
+}
+.Projects .wrapper .section__title p {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.25rem;
 }
 .Projects .wrapper .item {
   position: relative;
@@ -864,7 +867,12 @@ header.header-up {
   font-family: "Roboto Mono", "Noto Sans KR", monospace;
   font-size: 1.875rem;
   line-height: 1.2;
+}
+.Projects .wrapper .item .item_desc strong {
+  font-family: "Noto Sans KR";
+  font-size: 1.25rem;
   margin-bottom: 0.625rem;
+  display: block;
 }
 .Projects .wrapper .item .item_desc p {
   font-family: "Noto Sans KR";
@@ -885,19 +893,19 @@ header.header-up {
   background-color: cadetblue;
 }
 .Projects .wrapper .item01 .window a {
-  background: url(../img/window-webstandard.png) no-repeat center center/cover;
+  background: url(./assets/img/window-webstandard.png) no-repeat center center/cover;
 }
 .Projects .wrapper .item02 .window a {
-  background: url(../img/window-haagendazs.jpg) no-repeat center center/cover;
+  background: url(./assets/img/window-haagendazs.jpg) no-repeat center center/cover;
 }
 .Projects .wrapper .item03 .window a {
-  background: url(../img/window-momentum.png) no-repeat center center/cover;
+  background: url(./assets/img/window-momentum.png) no-repeat center center/cover;
 }
 .Projects .wrapper .item04 .window a {
-  background: url(../img/window-salady.png) no-repeat center center/cover;
+  background: url(./assets/img/window-salady.png) no-repeat center center/cover;
 }
 .Projects .wrapper .item05 .window a {
-  background: url(../img/window-canvas.png) no-repeat center center/180%;
+  background: url(./assets/img/window-canvas.png) no-repeat center center/180%;
 }
 .Projects .pagination {
   position: fixed;
@@ -954,7 +962,6 @@ header.header-up {
   justify-content: space-between;
   width: 100%;
   margin-top: -1.625rem;
-  position: relative;
 }
 .Archive .container .archive__title h2 {
   font-family: "Inter";
@@ -986,12 +993,6 @@ header.header-up {
      -moz-user-select: none;
           user-select: none;
   cursor: pointer;
-}
-.Archive .container .archive__title img {
-  position: absolute;
-  left: 61vw;
-  width: 60px;
-  z-index: -1;
 }
 .Archive .container .archive__cont {
   position: relative;
