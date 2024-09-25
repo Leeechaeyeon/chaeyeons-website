@@ -12,7 +12,6 @@
             @include flex(row, center, space-between);
             width: 100%;
             margin-top: -1.625rem;
-            position: relative;
 
             h2 {
                 font-family: 'Inter';
@@ -38,12 +37,6 @@
                 transition: .2s ease-in-out;
                 user-select: none;
                 cursor: pointer;
-            }
-            img {
-                position: absolute;
-                left: 61vw;
-                width: 60px;
-                z-index: -1;
             }
         }
         .archive__cont {

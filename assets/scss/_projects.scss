@@ -40,52 +40,56 @@
             h2 {
                 font-size: 4rem;
                 margin-bottom: 1rem;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: -51px;
+                    bottom: 10px;
+                    width: 50px;
+                    height: 50px;
+                    background: url(./../img/emoji-lightbulbpng.png)no-repeat center center /cover;
+                    animation: jiggleInfinite 11s infinite;
+                    animation-delay: 5s;
+                }
+                @keyframes jiggleInfinite {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+    
+                    9% {
+                        transform: rotate(0deg);
+                    }
+    
+                    10% {
+                        transform: rotate(-7deg);
+                    }
+    
+                    11% {
+                        transform: rotate(7deg);
+                    }
+    
+                    12% {
+                        transform: rotate(-7deg);
+                    }
+    
+                    13% {
+                        transform: rotate(7deg);
+                    }
+    
+                    14% {
+                        transform: rotate(0deg);
+                    }
+    
+                    100% {
+                        transform: rotate(0deg);
+                    }
+                }
             }
             p {
                 font-family: "Roboto Mono", monospace;
                 font-size: 1.25rem;
-            }
-            img {
-                position: absolute;
-                left: 20%;
-                bottom: 26%;
-                width: 60px;
-                z-index: -1;
-                animation: jiggleInfinite 11s infinite;
-                animation-delay: 5s;
-            }
-            @keyframes jiggleInfinite {
-                0% {
-                    transform: rotate(0deg);
-                }
-
-                9% {
-                    transform: rotate(0deg);
-                }
-
-                10% {
-                    transform: rotate(-7deg);
-                }
-
-                11% {
-                    transform: rotate(7deg);
-                }
-
-                12% {
-                    transform: rotate(-7deg);
-                }
-
-                13% {
-                    transform: rotate(7deg);
-                }
-
-                14% {
-                    transform: rotate(0deg);
-                }
-
-                100% {
-                    transform: rotate(0deg);
-                }
             }
         }
         .item {
@@ -129,7 +133,12 @@
                     font-family: "Roboto Mono",  'Noto Sans KR',  monospace;
                     font-size: 1.875rem;
                     line-height: 1.2;
+                }
+                strong {
+                    font-family: 'Noto Sans KR';
+                    font-size: 1.25rem;
                     margin-bottom: 0.625rem;
+                    display: block;
                 }
                 p {
                     font-family: 'Noto Sans KR';
