@@ -3,7 +3,7 @@
 
     .container {
         @include flexColumn();
-        width: 1080px;
+        width: 1280px;
         margin: -2rem auto 0;
         position: relative;
         
@@ -28,14 +28,6 @@
             top: 20%;
             width: 100px;
             transform: rotate(-6deg)
-        }
-        .emoji04 {
-            position: absolute;
-            width: 50px;
-            top: 62%;
-            left: -1%;
-            z-index: -1;
-            transform: rotate(-60deg)
         }
         #info {
             @include flex(column, center, center);
@@ -98,6 +90,21 @@
                 
                 &:nth-child(1) {
                     @include flex(column, center, flex-end);
+
+                    h5 {
+                        position: relative;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            right: -24px;
+                            top: -5px;
+                            display: block;
+                            width: 50px;
+                            height: 50px;
+                            z-index: -1;
+                            background: url(../img/emoji-bookline.png)no-repeat center center/contain;
+                        }
+                    }
                 }
                 &:nth-child(3) {
                     grid-column: 3/5;
