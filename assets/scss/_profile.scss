@@ -32,7 +32,7 @@
         .emoji04 {
             position: absolute;
             width: 50px;
-            top: 62.%;
+            top: 62%;
             left: -1%;
             z-index: -1;
             transform: rotate(-60deg)
@@ -75,7 +75,7 @@
                     top: -18px;
                     z-index: 10;
                     padding-top: 425px;
-                    background: url(./assets/img/img-frame.png)no-repeat center center/ cover;
+                    background: url(../img/img-frame.png)no-repeat center center/ cover;
                 }
                 .img-webpublisher {
                     display: block;
@@ -83,7 +83,7 @@
                     height: 150px;
                     font-size: 0;
                     margin-top: -20px;
-                    background: url(./assets/img/img-webpublisher.png)no-repeat center center / contain;
+                    background: url(../img/img-webpublisher.png)no-repeat center center / contain;
                 }
             }
         }
@@ -114,17 +114,17 @@
                     width: 1.3rem;
                     height: 1.3rem;
                     margin-right: 10px;
-                    background: url(./assets/img/ico-phone.png) no-repeat center center /cover;
+                    background: url(../img/ico-phone.png) no-repeat center center /cover;
                 }
                 .ico-mail {
                     width: 1.4rem;
                     height: 1.5rem;
-                    background: url(./assets/img/ico-mail.png) no-repeat center 3px /cover;
+                    background: url(../img/ico-mail.png) no-repeat center 3px /cover;
                 }
                 .ico-home {
                     width: 1.6rem;
                     height: 1.6rem;
-                    background: url(./assets/img/ico-home.png) no-repeat -2px 1px /cover;
+                    background: url(../img/ico-home.png) no-repeat -2px 1px /cover;
                     margin-right: 6px;
                 }
             }
