@@ -581,7 +581,7 @@ header.header-up {
   top: -18px;
   z-index: 10;
   padding-top: 425px;
-  background: url(./assets/img/img-frame.png) no-repeat center center/cover;
+  background: url(../img/img-frame.png) no-repeat center center/cover;
 }
 .Profile .container #info #info__wrap .img-webpublisher {
   display: block;
@@ -589,7 +589,7 @@ header.header-up {
   height: 150px;
   font-size: 0;
   margin-top: -20px;
-  background: url(./assets/img/img-webpublisher.png) no-repeat center center/contain;
+  background: url(../img/img-webpublisher.png) no-repeat center center/contain;
 }
 .Profile .container #describe {
   display: grid;
@@ -624,17 +624,17 @@ header.header-up {
   width: 1.3rem;
   height: 1.3rem;
   margin-right: 10px;
-  background: url(./assets/img/ico-phone.png) no-repeat center center/cover;
+  background: url(../img/ico-phone.png) no-repeat center center/cover;
 }
 .Profile .container #describe .desc__wrap .ico-mail {
   width: 1.4rem;
   height: 1.5rem;
-  background: url(./assets/img/ico-mail.png) no-repeat center 3px/cover;
+  background: url(../img/ico-mail.png) no-repeat center 3px/cover;
 }
 .Profile .container #describe .desc__wrap .ico-home {
   width: 1.6rem;
   height: 1.6rem;
-  background: url(./assets/img/ico-home.png) no-repeat -2px 1px/cover;
+  background: url(../img/ico-home.png) no-repeat -2px 1px/cover;
   margin-right: 6px;
 }
 .Profile .container #history {
@@ -893,19 +893,19 @@ header.header-up {
   background-color: cadetblue;
 }
 .Projects .wrapper .item01 .window a {
-  background: url(./assets/img/window-webstandard.png) no-repeat center center/cover;
+  background: url(../img/window-webstandard.png) no-repeat center center/cover;
 }
 .Projects .wrapper .item02 .window a {
-  background: url(./assets/img/window-haagendazs.jpg) no-repeat center center/cover;
+  background: url(../img/window-haagendazs.jpg) no-repeat center center/cover;
 }
 .Projects .wrapper .item03 .window a {
-  background: url(./assets/img/window-momentum.png) no-repeat center center/cover;
+  background: url(../img/window-momentum.png) no-repeat center center/cover;
 }
 .Projects .wrapper .item04 .window a {
-  background: url(./assets/img/window-salady.png) no-repeat center center/cover;
+  background: url(../img/window-salady.png) no-repeat center center/cover;
 }
 .Projects .wrapper .item05 .window a {
-  background: url(./assets/img/window-canvas.png) no-repeat center center/180%;
+  background: url(../img/window-canvas.png) no-repeat center center/180%;
 }
 .Projects .pagination {
   position: fixed;
