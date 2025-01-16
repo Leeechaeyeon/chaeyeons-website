@@ -298,7 +298,11 @@ header.header-up {
 }
 
 @media (max-width: 768px) {
+  #header {
+    padding: 0 15px;
+  }
   #header .container {
+    height: 50px;
     justify-content: center;
   }
   #header .container nav {
@@ -1335,7 +1339,13 @@ header.header-up {
 }
 
 @media (max-width: 768px) {
+  #footer {
+    padding: 0 15px;
+  }
   #footer .pinned_footer {
     height: 130px;
+  }
+  #footer .pinned_footer span {
+    font-size: 0.875rem;
   }
 }
