@@ -168,3 +168,44 @@
         }
     }
 }
+@include mobile {
+    .Home {
+        #scrollable {
+            padding-left: 0;
+            h1 {
+                font-size: 22vw;
+                height: 29vh;
+                white-space: pre-wrap;
+                word-break: break-all;
+                line-height: 1;
+            }
+        }
+        .wrap {
+            .emoji00 {
+                width: 160px;
+                bottom: 52%;
+                right: 4%;
+            }
+            .emoji01 {
+                width: 70px;
+                left: 1%;
+                bottom: 36%;
+            }
+            .emoji02 {
+                left: 23%;
+                bottom: 35%;
+                img {
+                    width: 140px;
+                }
+                span {
+                    width: 110px;
+                    margin-left: 18px;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+        .home_bottom {
+            bottom: 130px;
+        }
+    }
+}

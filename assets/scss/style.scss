@@ -23,11 +23,16 @@
     display: grid;
     grid-template-columns: $grid-column;
 }
-
 $break-m: 768px;
 $break-t: 1024px;
 $header-h: 106px;
 $footer-h: 100px;
+
+@mixin mobile {
+    @media (max-width: #{$break-m}) {
+        @content;
+    }
+}
 
 /**********
     all
@@ -82,7 +87,6 @@ body {
                 #dark_light {
                     color: #fff;
                 }
-
                 &.right {
                     .ico-link {
                         background-image: url(../img/ico-github_dark.png);

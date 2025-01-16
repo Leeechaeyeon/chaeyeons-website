@@ -188,3 +188,49 @@
         }
     }
 }
+@include mobile {
+    .Archive {
+        .container {
+            padding: 0;
+            .archive__title {
+                flex-direction: column;
+                align-items: center;
+                
+                div:first-child {
+                    display: none;
+                }
+                div:last-child {
+                    align-self: flex-end;
+                }
+            }
+            .archive__cont {
+                .modal {
+                    .modal__body {
+                        a {
+                            font-size: 2.4rem;
+                        }
+                    }
+                }
+                .modal2 {top: 2%;}
+                .modal3 {left: 20%;}
+                .modal6 {top: 50%}
+                .modal7 {top: 45%;}
+                .modal8 {left: 80%;}
+                .modal9 {
+                    width: 330px;
+                    left: 29%;
+                    top: 4%;
+                }
+                .modal10 {
+                    width: 210px;
+                    left: 79%;
+                    top: 62%;
+                }
+                .modal11 {
+                    left: 21%;
+                    top: 77%;
+                }
+            } 
+        }
+    }
+}

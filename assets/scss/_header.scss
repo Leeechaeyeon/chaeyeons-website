@@ -106,3 +106,22 @@ header {
         z-index: 1;
     }
 }
+@include mobile {
+    #header {
+        .container {
+            justify-content: center;
+            nav {
+                width: 100%;
+            }
+            .nav_side {
+                display: none;
+                &.right {
+                    display: none;
+                }
+            }
+        }
+        .bar {
+            border-radius: 0;
+        }
+    }
+}

@@ -255,5 +255,54 @@
             }
         }
     }
-
+}
+@include mobile {
+    .Profile {
+        .container {
+            width: 100%;
+            article:not(:first-child) {
+                margin-top: 2rem;
+            }
+            .emoji03 {
+                right: auto;
+                left: 70%;
+                top: 190px;
+                width: 80px;
+                z-index: 100;
+            }
+            #info {
+                .img-name {
+                    width: 360px;
+                    height: 200px;
+                }
+                #info__wrap {
+                    margin-top: -1rem;
+                }
+            }
+            #describe {
+                display: flex;
+                flex-direction: column;
+                .desc__wrap {
+                    line-height: 1.6;
+                }
+            }
+            #history {
+                flex-direction: column;
+                gap: 1.4rem;
+                #accordion {
+                    #career {
+                        .submenu {
+                            li {
+                                flex-direction: column;
+                                gap: 1rem;
+                                .date_term {
+                                    align-self: flex-end;
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+    }
 }

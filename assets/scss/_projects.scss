@@ -93,42 +93,33 @@
             }
         }
         .item {
-            position: relative;
             padding: 100px 80px;
             flex: 0 0 1000px;
             height: 100%;
             display: flex;
-            align-items: center;
             user-select: none;
             border-left: 1px solid rgba(0, 0, 0, .08);
             gap: 2rem;
-            
-            &:before {
-                counter-increment: item;
-                content: counter(item);
-                font-size: 100px;
-                opacity: .13;
-                font-weight: bold;
-                position: absolute;
-                z-index: -1;
-                transform: translate(-30px, -50px);
-                line-height: 1;
+
+            &:nth-child(2n+1) {
+                align-items: center;
             }
-            
-            &:nth-child(2n+2) {
-                align-items: flex-start;
-            }
-            
-            &:nth-child(4n+4) {
+            &:nth-child(3n+1) {
                 align-items: flex-end;
             }
-            &:nth-child(3) {
-                .item_desc {
-                    margin-top: 30px;
-                }
-            }
-
             .item_desc {
+                position: relative;
+                &:before {
+                    counter-increment: item;
+                    content: counter(item);
+                    font-size: 100px;
+                    opacity: .13;
+                    font-weight: bold;
+                    position: absolute;
+                    z-index: -1;
+                    transform: translate(-30px, -50px);
+                    line-height: 1;
+                }
                 h3 {
                     font-family: "Roboto Mono",  'Noto Sans KR',  monospace;
                     font-size: 1.875rem;
@@ -241,4 +232,35 @@
             }
         }
     }
-}   
+}
+@include mobile {
+    .Projects {
+        .wrapper {
+            .section__title {
+                flex: 0 0 400px;
+                padding: 100px 0;
+                h2 {
+                    font-size: 3rem;
+                }
+                p {
+                    width: 240px;
+                    font-size: 1rem;
+                }
+            }
+            .item {
+                flex: 0 0 400px;
+                flex-direction: column;
+                .window {
+                    width: 350px;
+                    height: 200px;
+                }
+                &:nth-child(2n+1) {
+                    justify-content: center;
+                }
+                &:nth-child(3n+1) {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}

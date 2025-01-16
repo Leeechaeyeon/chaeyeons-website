@@ -20,3 +20,10 @@
         }
     }
 }
+@include mobile {
+    #footer {
+        .pinned_footer {
+            height:130px;
+        }
+    }
+}
