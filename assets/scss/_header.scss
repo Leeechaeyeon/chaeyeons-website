@@ -108,7 +108,9 @@ header {
 }
 @include mobile {
     #header {
+        padding: 0 15px;
         .container {
+            height: 50px;
             justify-content: center;
             nav {
                 width: 100%;

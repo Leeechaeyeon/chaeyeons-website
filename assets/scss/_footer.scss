@@ -22,8 +22,12 @@
 }
 @include mobile {
     #footer {
+        padding: 0 15px;
         .pinned_footer {
             height:130px;
+            span {
+                font-size: 0.875rem;
+            }
         }
     }
 }
