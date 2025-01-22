@@ -6,7 +6,7 @@
     <title>ⓒ 2025 Leechaeyeon's website</title>
     <!-- Stylesheet-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- includeHtml JS -->
     <script>
         function includeHTML() {
@@ -88,7 +88,6 @@
                 </div>
             </div>
         </section>
-
         <!-- profile -->
         <section class="Profile tab_content" id="tab-2">
             <div class="wrap h100">
@@ -284,7 +283,6 @@
                 </div><!-- //container -->
             </div><!-- //wrap -->
         </section>
-
         <!-- projects -->
         <section class="Projects tab_content" id="tab-3">
             <div id="scrollbar">
@@ -294,6 +292,56 @@
                         <p>If you wanna check out my selected works,</p>
                         <p>Scroll Down > > > > > > Moving left</p>
                     </div>
+                    <div class="item item09">
+                        <div class="item_desc">
+                            <h3>PERU Intranet system</h3>
+                            <strong>가행광산 환경복원 기반 폐광계획(PCM) 정보화시스템 구축 프로젝트</strong>
+                            <p>
+                                • 하드코딩 웹 퍼블리싱<br>
+                                • 구글맵 Web API 삽입<br>
+                                • javaScript로 모달 팝업과 탭메뉴 등 간단한 동적요소 구현
+                            </p>
+                        </div>
+                        <div class="window">
+                            <a href="./projects/PERU_intranet/index.html" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="item item08">
+                        <div class="item_desc">
+                            <h3>지하수리모콘<br>모바일 app 퍼블리싱</h3>
+                            <p>
+                                • 모바일 app 기반 퍼블리싱<br>
+                                • 다양한 디바이스별 해상도 크로스체크 완료<br>
+                                • CSS animation을 활용한 동적 구현
+                            </p>
+                        </div>
+                        <div class="window">
+                            <a href="./projects/jihasu_control/index.html" target="_blank"></a>
+                        </div>
+                    </div>
+                    <div class="item item07">
+                        <div class="item_desc">
+                            <h3>국가지하수정보센터<br>스타일가이드 제작</h3>
+                            <p>
+                                • 디자인 및 퍼블리싱<br>
+                                • CSS의 hover를 이용한 동적 구현
+                            </p>
+                        </div>
+                        <div class="window">
+                            <a href="./projects/jihasu_information/index.html" target="_blank"></a>
+                        </div>
+                    </div>
+                    <!--
+                        <div class="item item06">
+                            <div class="item_desc">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="window">
+                                <a href="" target="_blank"></a>
+                            </div>
+                        </div>
+                    -->
                     <div class="item item01">
                         <div class="item_desc">
                             <h3>web standard site <br>웹표준 사이트</h3>
@@ -353,7 +401,6 @@
                             <a href="./projects/salady/index.html" target="_blank"></a>
                         </div>
                     </div>
-
                     <div class="item item05">
                         <div class="item_desc">
                             <h3>Canvas<br>그림판</h3>
@@ -371,7 +418,6 @@
                 </div>
             </div>
         </section>
-
         <!-- archive -->
         <section class="Archive tab_content" id="tab-4">
             <div class="container">
@@ -388,7 +434,7 @@
                         <button class="refresh">refresh all</button>
                     </div>
                 </div>
-                <div class="archive__cont">
+                <div class="archive__cont pc-only">
                     <div class="modal modal1">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -403,7 +449,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="modal modal2">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -446,7 +491,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="modal modal5">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -459,7 +503,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="modal modal6">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -473,7 +516,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="modal modal7">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -515,7 +557,6 @@
                             </p>
                         </div>
                     </div>
-
                     <div class="modal modal9">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -529,8 +570,6 @@
                             </P>
                         </div>
                     </div>
-                    
-
                     <div class="modal modal10">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -540,7 +579,6 @@
                             <a href="https://learned-helmet-4b3.notion.site/cf602f07c55d474b9b130cf87ae05b3e" target="_blank">Visit me!<br>notion</a>
                         </div>
                     </div>
-
                     <div class="modal modal11">
                         <div class="modal__body">
                             <div class="btn_fixed">
@@ -550,11 +588,86 @@
                             <a href="https://blog.naver.com/cy811">NAVER blog</a>
                         </div>
                     </div>
-
-                </div><!-- //archive__cont -->
+                </div><!-- pc-only -->
+                <div class="archive__cont mobile-only">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_01.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>디자인 전공생.</h4>
+                                옷을 좋아하고, 미감과 센스를 겸비한 디자이너입니다.
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_05.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>나에 대한 정의</h4>
+                                자칭 포토그래퍼<br>
+                                사진 찍는 걸 좋아하고, 잘해요.<br>
+                                누군가의 인생샷을 남겨주는건 즐거운 일이에요
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_08.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>제 성격은요...</h4>
+                                트렌드에 민감해요<br>
+                                유행하는 것은 다 경험해 보고 싶어요!
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_03.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>제 성격은요...2</h4>
+                                유쾌함. 즐겁게 사는 것이 삶의 모토!<br>
+                                꾸밈없는 성격, 솔직담백함
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_02.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>잘하는 것.</h4>
+                                네잎클로버 코바늘 뜨개질
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_11.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>좋아하는 것</h4>
+                                기록하는 것을 좋아합니다.<br>
+                                다이어리나 블로그로 일상을 기록하는 것을 꾸준히 하고 있습니다.
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_09.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>애정하는 것</h4>
+                                아기자기 한 것을 좋아해요<br>
+                                귀여운 것들을 보면 기분이 좋아져요 :)
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_07.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>좋아하는 것</h4>
+                                빵. <br>
+                                빵을 무척 좋아해요! 🥐
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/img/img-archive_12.jpg" alt="아카이브 이미지">
+                            <div class="swiper-cont">
+                                <h4>제 고양이 보세요</h4>
+                                팡이(5살)
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div><!-- mobile-only -->
             </div>
         </section>
-
     </main>
     <footer id="footer" class="includeJs" w3-include-html="./include/footer.html" ></footer>
 
@@ -565,6 +678,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/plugins/overscroll.js"></script>
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
     <!-- script -->
