@@ -128,13 +128,13 @@
                 strong {
                     font-family: 'Noto Sans KR';
                     font-size: 1.25rem;
-                    margin-bottom: 0.625rem;
                     display: block;
                 }
                 p {
                     font-family: 'Noto Sans KR';
                     width: 400px;
                     line-height: 1.5;
+                    margin-top: 0.625rem;
                 }
             }
             .window {
@@ -152,7 +152,6 @@
                 }
             }
         }
-
         .item01 {
             .window {
                 a {
@@ -185,6 +184,27 @@
             .window {
                 a {
                     background: url(../img/window-canvas.png)no-repeat center center/180%;
+                }
+            }
+        }
+        .item07 {
+            .window {
+                a {
+                    background: url(../img/window-jihasuinfo.png)no-repeat center center/cover;
+                }
+            }
+        }
+        .item08 {
+            .window {
+                a {
+                    background: url(../img/window-jihasuapp.png)no-repeat center center/cover;
+                }
+            }
+        }
+        .item09 {
+            .window {
+                a {
+                    background: url(../img/window-peru.png)no-repeat center center/cover;
                 }
             }
         }

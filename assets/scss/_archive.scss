@@ -45,6 +45,9 @@
             height: 100vh;
             font-family: 'Noto Sans KR';
 
+            &.mobile-only {
+                display: none;
+            }
             .modal {
                 display: block;
                 position: absolute;
@@ -190,45 +193,60 @@
 }
 @include mobile {
     .Archive {
+        height: 100vh;
         .container {
+            height: calc(100% - 11rem);
             padding: 0;
             .archive__title {
                 flex-direction: column;
                 align-items: center;
-                
-                div:first-child {
-                    display: none;
+                margin-bottom : 1rem;
+                h2 {
+                    font-size: 2rem;
                 }
-                div:last-child {
-                    align-self: flex-end;
+                div {
+                    display: none;
                 }
             }
             .archive__cont {
-                .modal {
-                    .modal__body {
-                        a {
-                            font-size: 2.4rem;
-                        }
+                height: 100%;
+
+                &.pc-only {
+                    display: none;
+                    .modal {
+                        display: none;
                     }
                 }
-                .modal2 {top: 2%;}
-                .modal3 {left: 20%;}
-                .modal6 {top: 50%}
-                .modal7 {top: 45%;}
-                .modal8 {left: 80%;}
-                .modal9 {
-                    width: 330px;
-                    left: 29%;
-                    top: 4%;
-                }
-                .modal10 {
-                    width: 210px;
-                    left: 79%;
-                    top: 62%;
-                }
-                .modal11 {
-                    left: 21%;
-                    top: 77%;
+                &.mobile-only {
+                    display: block;
+
+                    .swiper {
+                        width: 100%;
+                        height: 100%;
+
+                        .swiper-pagination-bullet-active {
+                            background: #000!important;
+                        }
+                        .swiper-slide {
+                            text-align: center;
+                            font-size: 1rem;
+                            background: #fff;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+    
+                            img {
+                                display: block;
+                                width: 100%;
+                                height: 70%;
+                                object-fit: cover;
+                            }
+                            .swiper-cont {
+                                margin-top: 1rem;
+                            }
+                        }
+                    }
                 }
             } 
         }
