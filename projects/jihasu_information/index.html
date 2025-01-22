@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국가지하수정보센터 스타일가이드</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <section>
+            <h1 class="logo">국가지하수정보센터<br>스타일가이드</h1>
+        </section>
+        <!-- Font, Type, Color : 폰트, 텍스트, 컬러 -->
+        <section class="section-column">
+            <section>
+                <section style="border-bottom: 1px solid #e9edf3;">
+                    <h2 class="section-tit">Font</h2>
+                    <div class="group-form bottom">
+                        <h1>가</h1>
+                        <strong>가</strong>
+                        <h1>A</h1>
+                        <strong>a</strong>
+                    </div>
+                    <p class="mt10">Line Seed</p>
+                </section>
+                <section>
+                    <h2 class="section-tit">Type</h2>
+                    <div class="section-column">
+                        <div class="type-wrap">
+                            <span class="box-tit">Heading :</span>
+                            <div class="group-form">
+                                <span>32px</span>
+                                <span>Bold</span>
+                                <h1>Heading1</h1>
+                            </div>
+                            <div class="group-form">
+                                <span>26px</span>
+                                <span>Bold</span>
+                                <h2>Heading2</h2>
+                            </div>
+                            <div class="group-form">
+                                <span>21px</span>
+                                <span>Bold</span>
+                                <h3>Heading3</h3>
+                            </div>
+                        </div>
+                        <div class="type-wrap">
+                            <span class="box-tit">Text :</span>
+                            <div class="group-form">
+                                <span>16px</span>
+                                <span>regular</span>
+                                <p>default size text</p>
+                            </div>
+                            <div class="group-form">
+                                <span>14px</span>
+                                <span>regular</span>
+                                <p class="text-sm">small size text</p>
+                            </div>
+                            <div class="group-form">
+                                <span>16px</span>
+                                <span>regular</span>
+                                <p>button size text</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <h2 class="section-tit">Color</h2>
+                <div class="box-tit">Primary colors :</div>
+
+                <div class="palette-wrap">
+                    <div class="palette">
+                        <div class="color1"></div>
+                        <div class="hex-code">#87EAFE #9C86FF #EFB2FE</div>
+                    </div>
+                    <div class="palette">
+                        <div class="color2"></div>
+                        <div class="hex-code">#25beff</div>
+                    </div>
+                    <div class="palette">
+                        <div class="color3"></div>
+                        <div class="hex-code">#d980e5</div>
+                    </div>
+                    <div class="palette">
+                        <div class="color4"></div>
+                        <div class="hex-code">#7D23F4</div>
+                    </div>
+                    <div class="palette">
+                        <div class="color5"></div>
+                        <div class="hex-code">#5618A8</div>
+                    </div>
+                </div>
+
+                <div class="box-tit">gray colors :</div>
+                <div class="palette-wrap">
+                    <div class="palette">
+                        <div class="color-gray1"></div>
+                        <div class="hex-code">#e9edf3</div>
+                    </div>
+                    <div class="palette">
+                        <div class="color-gray2"></div>
+                        <div class="hex-code">#c0c5cc</div>
+                    </div>
+                    <div class="palette">
+                        <div class="color-gray3"></div>
+                        <div class="hex-code">#e0dcf3</div>
+                    </div>
+                    <div class="palette">
+                        <div class="color-gray4"></div>
+                        <div class="hex-code">#bcb5dd</div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- table : 테이블 -->
+        <section>
+            <h2 class="section-tit">Table</h2>
+            <div class="box-tit">
+                table - 게시판형 : 
+            </div>
+            <div class="table-tit">
+                <span>총</span>
+                <span class="table-tit-num">00</span>
+                <span>건</span>
+            </div>
+            <table class="type1">
+                <caption>게시판형 테이블 영역입니다.</caption>
+                <colgroup>
+                    <col width="5%">
+                    <col width="50%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>순번</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>등록일</th>
+                        <th>조회</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="title">sample</td>
+                        <td>관리자</td>
+                        <td>2025-01-01</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="title">sample</td>
+                        <td>관리자</td>
+                        <td>2025-01-01</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="box-tit mt20">
+                table - 표형 : 
+            </div>
+            <table class="type2">
+                <caption>표형 테이블 영역입니다.</caption>
+                <colgroup>
+                    <col width="20%">
+                    <col>
+                    <col wdith="30%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th colspan="2">1.순공사비</th>
+                        <th>58,498 원</th>
+                    </tr>
+                    <tr>
+                        <td>상부보호공 제거</td>
+                        <td>순공사비의 6%</td>
+                        <td>10 원</td>
+                    </tr>
+                    <tr>
+                        <td>인력되메움</td>
+                        <td>개소당</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>2.일반관리비</th>
+                        <td>순공사비의 6%</td>
+                        <td>10 원</td>
+                    </tr>
+                    <tr>
+                        <th>3.이윤</th>
+                        <td>(순공사비+일반관리비) * 10%</td>
+                        <td>6,200 원</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="2">합계</th>
+                        <td>75,000 원</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <!-- tabmenu : 탭메뉴 -->
+        <section>
+            <h2 class="section-tit">Tab</h2>
+            <div class="box-tit">
+                01 Depth
+            </div>
+            <div class="tabmenu depth1">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab-1"><a href="#">지하의 물</a></li>
+                    <li class="tab-link" data-tab="tab-2"><a href="#">물의순환</a></li>
+                    <li class="tab-link" data-tab="tab-3"><a href="#">지하수의 생성</a></li>
+                    <li class="tab-link" data-tab="tab-4"><a href="#">수자원 부존량</a></li>
+                    <li class="tab-link" data-tab="tab-5"><a href="#">물빈곤지수</a></li>
+                </ul>
+                <div class="tab-content current" id="tab-1"></div>
+                <div class="tab-content" id="tab-2"></div>
+                <div class="tab-content" id="tab-3"></div>
+                <div class="tab-content" id="tab-4"></div>
+                <div class="tab-content" id="tab-5"></div>
+            </div>
+            <div class="box-tit mt20">
+                02 Depth
+            </div>
+            <div class="tabmenu depth2">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab2-1"><a href="#">지하의 물</a></li>
+                    <li class="tab-link" data-tab="tab2-2"><a href="#">물의순환</a></li>
+                    <li class="tab-link" data-tab="tab2-3"><a href="#">지하수의 생성</a></li>
+                    <li class="tab-link" data-tab="tab2-4"><a href="#">수자원 부존량</a></li>
+                    <li class="tab-link" data-tab="tab2-5"><a href="#">물빈곤지수</a></li>
+                </ul>
+            </div>
+            <div class="box-tit mt20">
+                03 Depth
+            </div>
+            <div class="tabmenu depth3">
+                <ul class="tabs">
+                    <li class="tab-link current" data-tab="tab3-1"><a href="#">지하의 물</a></li>
+                    <li class="tab-link" data-tab="tab3-2"><a href="#">물의순환</a></li>
+                    <li class="tab-link" data-tab="tab3-3"><a href="#">지하수의 생성</a></li>
+                    <li class="tab-link" data-tab="tab3-4"><a href="#">수자원 부존량</a></li>
+                    <li class="tab-link" data-tab="tab3-5"><a href="#">물빈곤지수</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Button : 버튼 -->
+        <section>
+            <h2 class="section-tit">Button</h2>
+            <div class="section-column">
+                <div>
+                    <div class="box-tit">1. primary button</div>
+                    <button type="button" class="btn primary">default</button>
+                    <button type="button" class="btn primary hover">hover</button>
+                    <button type="button" class="btn primary" disabled>disabled</button>
+                    <div class="box-tit mt20 ">3. positive button</div>
+                    <button type="button" class="btn positive">default</button>
+                    <button type="button" class="btn positive hover">hover</button>
+                    <button type="button" class="btn primary" disabled>disabled</button>
+                </div>
+                <div>
+                    <div class="box-tit">2. secondary button</div>
+                    <button type="button" class="btn secondary">default</button>
+                    <button type="button" class="btn secondary hover">hover</button>
+                    <button type="button" class="btn secondary" disabled>disabled</button>
+                    <div class="box-tit mt20">4. negative button</div>
+                    <button type="button" class="btn negative">default</button>
+                    <button type="button" class="btn negative hover">hover</button>
+                    <button type="button" class="btn negative" disabled>disabled</button>
+                </div>
+            </div>
+        </section>
+        <!-- input form : 입력필드 -->
+        <section>
+            <h2 class="section-tit">Form</h2>
+            <div class="section-grid col3">
+                <div>
+                    <div class="box-tit">
+                        Input [text]
+                    </div>
+                    <input type="text" class="form-input" placeholder="입력해 주세요.">
+                    <div class="box-tit mt20">
+                        Input [text] : disabled
+                    </div>
+                    <input type="text" class="form-input" placeholder="입력해 주세요." disabled>
+                </div>
+                <div>
+                    <div class="box-tit">   
+                        Input [select]
+                    </div>
+                    <select class="form-select" title="선택" placeholder="항목을 선택해 주세요.">
+                        <option value="">항목1</option>
+                        <option value="">항목2</option>
+                    </select>
+                    <div class="box-tit mt20">   
+                        Input [select] : disabled
+                    </div>
+                    <select class="form-select" title="선택" placeholder="항목을 선택해 주세요." disabled>
+                        <option value="">항목1</option>
+                        <option value="">항목2</option>
+                    </select>
+                </div>
+                <div>
+                    <div class="box-tit">
+                        Input [text] + Button [search]
+                    </div>
+                    <div class="form-search">
+                        <label for="search" class="hd-element">검색어를 입력하세요</label>
+                        <input type="text" id="" name="search" placeholder="검색어를 입력해 주세요">
+                        <button type="button" class="btn search" id="">검색</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="box-tit">
+                        Checkbox
+                    </div>
+                    <div class="control-wrap">
+                        <div class="form-control">
+                            <input type="checkbox" name="chk_1" id="chk_1">
+                            <label for="chk_1">기본</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="checkbox" name="chk_1" id="chk_2" checked>
+                            <label for="chk_2">선택됨</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="checkbox" name="chk_1" id="chk_3" disabled>
+                            <label for="chk_3">비활성화</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="checkbox" name="" id="chk_4" disabled checked>
+                            <label for="chk_4">선택된 비활성화</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="box-tit">
+                        Radio
+                    </div>
+                    <div class="control-wrap">
+                        <div class="form-control">
+                            <input type="radio" name="rdo_1" id="rdo_1">
+                            <label for="rdo_1">기본</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="rdo_1" id="rdo_2" checked>
+                            <label for="rdo_2">선택됨</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="rdo_1" id="rdo_3" disabled>
+                            <label for="rdo_3">비활성화</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="" id="rdo_4" disabled checked>
+                            <label for="rdo_4">선택된 비활성화</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="box-tit">Pagination</div>
+                    <div class="pagination">
+                        <a class="page-navi prev" href="#">이전</a>
+                        <div class="page-links">
+                            <a class="page-link" href="#">1</a>
+                            <a class="page-link" href="#">2</a>
+                            <a class="page-link active" href="#">3</a>
+                            <a class="page-link" href="#">4</a>
+                            <a class="page-link" href="#">5</a>
+                        </div>
+                        <a class="page-navi next" href="#">다음</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- icon : 공통 아이콘 -->
+        <section>
+            <h2 class="section-tit">Icon</h2>
+            <div class="ico-wrap">
+                <div class="ico-cont">
+                    <i class="ico-new"></i>
+                    <span>New window</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-search"></i>
+                    <span>Search</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-down"></i>
+                    <span>Download</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-popup"></i>
+                    <span>Popup</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-print"></i>
+                    <span>Print</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-lang"></i>
+                    <span>Language</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-first"></i>
+                    <span>First</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-last"></i>
+                    <span>Last</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-more"></i>
+                    <span>More</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-prev"></i>
+                    <span>Prev</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-next"></i>
+                    <span>Next</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-dropdown"></i>
+                    <span>Dropdown</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-home"></i>
+                    <span>Home</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-cal"></i>
+                    <span>Calendar</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-pdf"></i>
+                    <span>File : PDF</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-xls"></i>
+                    <span>File : Excel</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-hwp"></i>
+                    <span>File : HWP</span>
+                </div>
+                <div class="ico-cont">
+                    <i class="ico-qna"></i>
+                    <span>Qna</span>
+                </div>
+            </div>
+        </section>
+        <!-- Search filter : 테이블 형식 조회영역 -->
+        <section>
+            <h2 class="section-tit">Search filter</h2>
+            <div class="search-filter">
+                <table class="type2">
+                    <colgroup>
+                        <col width="25%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>조회지역</th>
+                            <td>
+                                <div class="group-form">
+                                    <select class="form-select wd30" title="선택">
+                                        <option value="">행정구역별</option>
+                                    </select>
+                                    <select class="form-select wd30" title="선택">
+                                        <option value="">서울특별시</option>
+                                    </select>
+                                    <select class="form-select wd30" title="선택">
+                                        <option value="">서울특별시</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>측정소선택</th>
+                            <td>
+                                <div class="group-form">
+                                    <select class="form-select wd30" title="선택">
+                                        <option value="">서울 마곡</option>
+                                    </select>
+                                    <select class="form-select wd30" title="선택">
+                                        <option value="">암반</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>조회기간</th>
+                            <td>
+                                <select class="form-select wd30" title="선택">
+                                    <option value="">2022년</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>조회항목</th>
+                            <td>
+                                <div class="btn-group">
+                                    <button type="button" class="btn primary">전체</button>
+                                    <button type="button" class="btn primary">수위</button>
+                                    <button type="button" class="btn secondary">수온</button>
+                                    <button type="button" class="btn secondary">EC</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="filter-bottom">
+                    <button class="btn search">검색</button>
+                </div>
+            </div>
+        </section>
+        <!-- location : breadcrumb, 페이지타이틀 -->
+        <section>
+            <h2 class="section-tit">Location/Page title</h2>
+            <nav class="breadcrumb-wrap">
+                <ol class="breadcrumb">
+                    <li class="home"><a href="#" class="txt">홈</a></li>
+                    <li><a href="#" class="txt">고객지원</a></li>
+                    <li><a href="#" class="txt">센터소개</a></li>
+                    <li><a href="#" class="txt">국가지하수정보센터는</a></li>
+                </ol>
+            </nav>
+            <div class="page-tit">
+                <h2>국가지하수정보센터는</h2>
+            </div>
+        </section>
+        <!-- Survey : 만족도 조사 박스 -->
+        <section>
+            <h2 class="section-tit">Satisfaction Survey</h2>
+            <div class="survey-wrap">
+                <div class="survey-tit">
+                    <p>이 페이지에서 제공하는 정보에 대하여 만족하십니까?</p>
+                </div>
+                <div class="survey-cont">
+                    <div class="control-wrap">
+                        <div class="form-control">
+                            <input type="radio" name="rdo_2" id="rdo_5">
+                            <label for="rdo_5">매우 만족</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="rdo_2" id="rdo_6" checked>
+                            <label for="rdo_6">만족</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="rdo_2" id="rdo_7">
+                            <label for="rdo_7">보통</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="rdo_2" id="rdo_8">
+                            <label for="rdo_8">불만족</label>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="rdo_2" id="rdo_9">
+                            <label for="rdo_9">매우 불만족</label>
+                        </div>
+                    </div>
+                    <button class="btn">평가하기</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+

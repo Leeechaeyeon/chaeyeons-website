@@ -1,0 +1,93 @@
+.section-column {
+    display: flex;
+    flex-direction: row;
+}
+.section-column > div {
+    flex: 0 1 auto;
+    margin-right: 2.4rem;
+}
+.section-grid {
+    display: grid;
+    gap: 3rem;
+}
+.section-grid.col3 {
+    grid-template-columns: repeat(3,1fr);
+}
+section {
+    padding: 3rem;
+    border-bottom: 1px solid #e9edf3;
+}
+section > section {
+    flex: 1;
+    border-bottom: 0;
+}
+section > section:last-child {
+    border-left: 1px solid #e9edf3;
+}
+section:has(section) {
+    padding: 0;
+}
+.section-tit {
+    margin-bottom: 1.8rem;
+}
+.box-tit {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.type-wrap > div{ 
+    height: 4.2rem;
+}
+.type-wrap span {
+    width: 6rem;
+}
+.palette-wrap {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+.palette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hex-code {
+    width: 100px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+div[class^="color"] {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-bottom: .5rem;
+}
+.color1 {
+    background: linear-gradient(80.1deg, #3cdeff -20.2%, #8a70ff 47.53%, #e061ff 124.28%);
+    /*linear-gradient(80.1deg,#87EAFE -20.2%,#9C86FF 47.53%,#EFB2FE 124.28%);*/
+}
+.color2 {
+    background: #25beff;
+}
+.color3 {
+    background: #d980e5;
+}
+.color4 {
+    background: #7D23F4;
+}
+.color5 {
+    background: #5618A8;
+}
+
+.color-gray1 {
+    background: #e9edf3;
+}
+.color-gray2 {
+    background: #c0c5cc;
+}
+.color-gray3 {
+    background: #e0dcf3;
+}
+.color-gray4 {
+    background: #bcb5dd;
+}
