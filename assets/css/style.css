@@ -1325,7 +1325,7 @@ header.header-up {
   }
   .Archive .container .archive__cont.mobile-only .swiper .swiper-slide img {
     display: block;
-    width: 100%;
+    width: 70%;
     height: 70%;
     -o-object-fit: cover;
        object-fit: cover;
