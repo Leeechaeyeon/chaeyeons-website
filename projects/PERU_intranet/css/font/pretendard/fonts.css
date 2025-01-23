@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../webfonts/pretendard-Thin.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../webfonts/pretendard-ExtraLight.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../webfonts/pretendard-Light.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../webfonts/pretendard-Regular.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../webfonts/pretendard-Medium.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../webfonts/pretendard-SemiBold.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../webfonts/pretendard-Bold.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 800;
+  src: url(../webfonts/pretendard-ExtraBold.otf) format('opentype'); 
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 900;
+  src: url(../webfonts/pretendard-Black.otf) format('opentype'); 
+}
