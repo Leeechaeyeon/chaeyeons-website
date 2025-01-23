@@ -170,7 +170,7 @@ for (let i = 0; i < tab.length; i++) {
 
 
 /*************
-    arcive탭에서 modal 클릭 시 맨앞으로 가져오기
+    archive탭에서 modal 클릭 시 맨앞으로 가져오기
 *************/
 document.querySelectorAll('.modal').forEach(el => {
     el.addEventListener('click', () => {
@@ -184,7 +184,7 @@ document.querySelectorAll('.modal').forEach(el => {
   })}
 
 /*************
-    arcive탭에서 modal창 닫기
+    archive탭에서 modal창 닫기
 *************/
 const btnClose = document.querySelectorAll(".close");
 
@@ -200,7 +200,7 @@ btnClose.forEach(button => {
 });
 
 /*************
-    arcive탭에서 refresh 버튼 클릭시 modal 전부 다시 불러오기
+    archive탭에서 refresh 버튼 클릭시 modal 전부 다시 불러오기
 *************/
 
 const modals = document.querySelectorAll(".modal");
@@ -225,3 +225,12 @@ refresh.addEventListener("click", function() {
         showAllModals();
     }
 });
+/*************
+    arcive mobile-only 이미지 슬라이드 구현
+*************/
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+  });
